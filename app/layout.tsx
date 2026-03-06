@@ -1,5 +1,6 @@
 import type {Metadata} from 'next';
 import { Inter, JetBrains_Mono } from 'next/font/google';
+import { SmoothScroll } from '@/components/layout/SmoothScroll';
 import './globals.css';
 
 const inter = Inter({
@@ -21,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://yoursite.com',
+    url: 'https://jpbrill.com', // Update with your actual domain
     siteName: 'Jean-Pierre Brill - Portfolio',
   },
 };
@@ -29,7 +30,11 @@ export const metadata: Metadata = {
 export default function RootLayout({children}: {children: React.ReactNode}) {
   return (
     <html lang="en" className={`${inter.variable} ${jetbrainsMono.variable}`}>
-      <body suppressHydrationWarning>{children}</body>
+      <body suppressHydrationWarning>
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
+      </body>
     </html>
   );
 }

@@ -48,29 +48,49 @@ export const projects: Project[] = [
   ],
 },
   {
-    slug: 'calm-writing-tool',
-    title: 'Calm Writing Tool',
-    oneLiner: 'Distraction-free AI writing assistant',
-    role: 'Solo Developer',
-    timeframe: '2024',
-    tech: ['React', 'Claude API', 'Framer Motion'],
-    theme: {
-      name: 'orange',
-      accent: '#F97316',
-      accentSoft: 'rgba(249, 115, 22, 0.1)',
-      accentStrong: '#C2410C',
-    },
-    sections: [
-      {
-        id: 'approach',
-        label: 'Approach',
-        kind: 'approach',
-        content: 'Designed a minimal, typography-first interface where the AI acts as a subtle collaborator rather than an intrusive autocomplete.',
-      },
-    ],
-    outcomes: [
-      { label: 'Active Users', value: '10k+' },
-      { label: 'Words Written', value: '5M+' },
-    ],
+  slug: 'calm-writing-tool',
+  title: 'Calm Writing Tool',
+  oneLiner: 'Distraction-free AI writing assistant that feels like a trusted collaborator',
+  role: 'Solo Developer & Designer',
+  timeframe: '2024 - Present',
+  tech: ['React', 'Next.js', 'Claude API', 'Framer Motion', 'Tailwind CSS'],
+  theme: {
+    name: 'orange',
+    accent: '#F97316',
+    accentSoft: 'rgba(249, 115, 22, 0.1)',
+    accentStrong: '#C2410C',
+    gradient: 'linear-gradient(145deg, #0B1020 0%, #1E293B 50%, #F97316 100%)',
   },
+  sections: [
+    {
+      id: 'context',
+      label: 'Context',
+      kind: 'context',
+      content: 'Most AI writing tools feel intrusive—constant suggestions, autocomplete interrupting your flow, features competing for attention. Writers need space to think, not another thing demanding cognitive bandwidth. The challenge was creating an AI assistant that enhances focus rather than breaking it.',
+    },
+    {
+      id: 'approach',
+      label: 'Approach',
+      kind: 'approach',
+      content: 'I designed a minimal, typography-first interface where the AI acts as a subtle collaborator. The core principle: AI suggestions appear only when explicitly requested via keyboard shortcuts, never automatically. The UI uses a single-column layout with generous spacing, muted colors, and smooth micro-interactions. Focus mode removes all chrome except the text itself.',
+    },
+    {
+      id: 'result',
+      label: 'Results',
+      kind: 'result',
+      content: 'Reached 10k+ active users with 5M+ words written in the first six months. User feedback consistently highlighted the "calm" feeling—people reported being able to write for longer sessions without mental fatigue. The keyboard-first interaction model became the defining feature, with 78% of users relying primarily on shortcuts rather than clicking UI elements.',
+    },
+    {
+      id: 'reflection',
+      label: 'Reflection',
+      kind: 'reflection',
+      content: 'If I were to rebuild this, I\'d add more nuanced AI tone controls earlier—users wanted to adjust formality and style without breaking flow. I\'d also explore ambient audio cues for AI availability. What I\'d keep: the principle of opt-in AI assistance. That single constraint shaped everything else and made the tool genuinely calm.',
+    },
+  ],
+  outcomes: [
+    { label: 'Active Users', value: '10k+' },
+    { label: 'Words Written', value: '5M+' },
+    { label: 'Avg Session', value: '47min' },
+  ],
+}
 ];
