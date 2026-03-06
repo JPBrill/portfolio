@@ -1,4 +1,3 @@
-// app/projects/[slug]/page.tsx
 import { notFound } from 'next/navigation';
 import { projects } from '@/lib/projects';
 import { AppShell } from '@/components/layout/AppShell';
@@ -23,7 +22,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
   return (
     <AppShell theme={project.theme}>
+      {/* SignalLine rendered outside MainColumn for proper fixed positioning */}
       <SignalLine sections={sections} accentColor={project.theme.accent} />
+      
       <MainColumn>
         <ProjectHero project={project} />
         
