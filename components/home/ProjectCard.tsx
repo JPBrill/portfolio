@@ -29,15 +29,15 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
           <div className="flex flex-col md:flex-row md:items-start justify-between gap-6 relative z-10">
             <div className="flex-1">
-              <div className="flex items-center gap-3 mb-2">
-                <span 
-                  className="w-2 h-2 rounded-full" 
-                  style={{ backgroundColor: project.theme.accent }}
-                />
-                <h3 className="text-xl font-semibold text-text-primary group-hover:text-accent-primary transition-colors duration-200">
-                  {project.title}
-                </h3>
-              </div>
+              <div className="flex items-center gap-3 mb-3">
+      <div 
+        className="w-1 h-6 rounded-full" 
+        style={{ backgroundColor: project.theme.accent }}
+      />
+      <h3 className="text-xl font-semibold text-text-primary group-hover:text-accent-primary transition-colors duration-200">
+        {project.title}
+      </h3>
+    </div>
               
               <p className="text-text-secondary text-base mb-6 max-w-xl leading-relaxed">
                 {project.oneLiner}

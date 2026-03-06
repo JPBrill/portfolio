@@ -11,13 +11,13 @@ export function IdentityStrip() {
       <div>
         <Link href="/" className="block mb-8 group">
           <h1 className="text-lg font-medium tracking-tight text-text-primary group-hover:text-accent-primary transition-colors duration-180">
-            John Doe
+            Jean-Pierre Brill
           </h1>
           <p className="text-sm text-text-secondary mt-1">
-            Product Designer & Engineer
+            AI Developer & Engineer
           </p>
           <p className="text-xs text-text-secondary/70 mt-1 font-mono">
-            San Francisco, CA
+            Margate, RSA
           </p>
         </Link>
 
@@ -33,7 +33,7 @@ export function IdentityStrip() {
           Now
         </div>
         <p className="text-sm text-text-secondary leading-relaxed">
-          Building AI-native experiences and exploring new interaction paradigms.
+          Building AI-native applications with Perplexity, AI Studio, and exploring UX patterns.
         </p>
       </div>
     </aside>

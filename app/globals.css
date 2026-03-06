@@ -4,10 +4,18 @@
 @theme {
   --color-bg-base: #05060A;
   --color-bg-elevated: #101218;
+  --color-bg-hover: #1A1D28;
+  --color-border-subtle: #232633;
+  --color-border-medium: #2D3142;
   --color-text-primary: #F5F7FF;
   --color-text-secondary: #9EA3B8;
+  --color-text-tertiary: #6B7280;
   --color-accent-primary: #15F4D1;
+  --color-accent-soft: rgba(21, 244, 209, 0.08);
+  --color-accent-strong: #35BDF8;
+  --radius-sm: 4px;
   --radius-base: 8px;
+  --radius-lg: 12px;
 }
 
 @layer base {

@@ -13,8 +13,17 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Minimal AI Portfolio',
-  description: 'A modern, minimal portfolio website showcasing AI-driven projects with a dark, instrument-like aesthetic.',
+  title: {
+    default: 'Jean-Pierre Brill | AI Developer & Engineer',
+    template: '%s | Jean-Pierre Brill'
+  },
+  description: 'Building AI-native experiences that feel inevitable, not artificial. Portfolio showcasing AI-driven applications built with modern tools.',
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    url: 'https://yoursite.com',
+    siteName: 'Jean-Pierre Brill - Portfolio',
+  },
 };
 
 export default function RootLayout({children}: {children: React.ReactNode}) {
