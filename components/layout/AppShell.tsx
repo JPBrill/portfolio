@@ -15,10 +15,10 @@ export function AppShell({ children, theme }: AppShellProps) {
   const pathname = usePathname();
 
   return (
-    <div className="min-h-screen bg-bg-base text-text-primary flex flex-col md:flex-row">
+    <div className="min-h-screen bg-bg-base text-text-primary">
       <IdentityStrip />
       
-      <main className="flex-1 md:ml-64 pt-32 md:pt-0 min-h-screen relative">
+      <main className="md:ml-64 pt-48 md:pt-0 min-h-screen relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}

@@ -23,7 +23,7 @@ export default function WritingPage() {
 
           <div className="text-text-secondary">
             <p className="text-base">
-              Coming soon. I'm working on a collection of essays and notes about:
+              Coming soon. I&apos;m working on a collection of essays and notes about:
             </p>
             
             <ul className="mt-6 space-y-3 text-base">

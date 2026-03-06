@@ -21,7 +21,7 @@ export function IdentityStrip() {
           </p>
         </Link>
 
-        <nav className="flex md:flex-col gap-4 md:gap-2 overflow-x-auto md:overflow-visible pb-2 md:pb-0">
+        <nav className="flex flex-wrap md:flex-col gap-4 md:gap-2 pb-2 md:pb-0">
           <NavLink href="/" active={pathname === '/'}>Work</NavLink>
           <NavLink href="/about" active={pathname === '/about'}>About</NavLink>
           <NavLink href="/writing" active={pathname === '/writing'}>Writing</NavLink>
