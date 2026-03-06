@@ -47,6 +47,52 @@ export const projects: Project[] = [
     { label: 'Daily Active Users', value: '2.3k' },
   ],
 },
+{
+  slug: 'notion-ai-companion',
+  title: 'Notion AI Companion',
+  oneLiner: 'Context-aware AI assistant that understands your Notion workspace',
+  role: 'Product Designer & Engineer',
+  timeframe: '2025',
+  tech: ['Next.js', 'TypeScript', 'Notion API', 'OpenAI API', 'Tailwind CSS'],
+  theme: {
+    name: 'purple',
+    accent: '#A855F7',
+    accentSoft: 'rgba(168, 85, 247, 0.1)',
+    accentStrong: '#7C3AED',
+    gradient: 'linear-gradient(140deg, #0F0A1E 0%, #1E1537 50%, #A855F7 100%)',
+  },
+  sections: [
+    {
+      id: 'context',
+      label: 'Context',
+      kind: 'context',
+      content: 'Notion users often juggle dozens of pages, databases, and notes, making it hard for generic AI assistants to provide relevant help. They lack context about your workspace structure, ongoing projects, and specific terminology. The challenge was building an AI that feels like it truly understands your workspace without being intrusive.',
+    },
+    {
+      id: 'approach',
+      label: 'Approach',
+      kind: 'approach',
+      content: 'I designed a companion that builds a contextual map of your workspace through the Notion API, identifying key databases, recurring patterns, and relationships between pages. The AI uses this context to provide workspace-aware suggestions. The interface is a minimal side panel that appears only when summoned via keyboard shortcut, showing relevant suggestions based on the page you\'re currently viewing.',
+    },
+    {
+      id: 'result',
+      label: 'Results',
+      kind: 'result',
+      content: 'Beta users reported a 60% reduction in time spent searching for related pages and information. The context-aware suggestions had an 82% acceptance rate, significantly higher than generic AI tools. Users particularly valued the "quiet intelligence"—the AI stayed invisible until needed but was remarkably helpful when invoked.',
+    },
+    {
+      id: 'reflection',
+      label: 'Reflection',
+      kind: 'reflection',
+      content: 'If I were to rebuild this, I\'d add more granular privacy controls—some users wanted to exclude certain databases from AI analysis. I\'d also explore proactive (but non-intrusive) suggestions when the AI detects patterns like "You\'ve been working on this document for 2 hours, here are related resources." What worked perfectly: the invisible-until-needed model. Users loved that it never interrupted their flow.',
+    },
+  ],
+  outcomes: [
+    { label: 'Search Time', value: '-60%' },
+    { label: 'Acceptance Rate', value: '82%' },
+    { label: 'Beta Users', value: '450+' },
+  ],
+},
   {
   slug: 'calm-writing-tool',
   title: 'Calm Writing Tool',
