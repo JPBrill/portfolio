@@ -1,0 +1,17 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-bg-base: #05060A;
+  --color-bg-elevated: #101218;
+  --color-text-primary: #F5F7FF;
+  --color-text-secondary: #9EA3B8;
+  --color-accent-primary: #15F4D1;
+  --radius-base: 8px;
+}
+
+@layer base {
+  body {
+    @apply bg-bg-base text-text-primary font-sans antialiased selection:bg-accent-primary/30 selection:text-accent-primary;
+  }
+}
