@@ -5,6 +5,7 @@ import { MainColumn } from '@/components/layout/MainColumn';
 import { ProjectHero } from '@/components/project/ProjectHero';
 import { StorySection } from '@/components/project/StorySection';
 import { SignalLine } from '@/components/ui/SignalLine';
+import { BackButton } from '@/components/ui/BackButton';
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -26,6 +27,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
       <SignalLine sections={sections} accentColor={project.theme.accent} />
       
       <MainColumn>
+        <div className="mb-8">
+          <BackButton fallbackUrl="/" />
+        </div>
         <ProjectHero project={project} />
         
         {project.sections.map((section) => (

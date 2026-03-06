@@ -25,14 +25,14 @@ export default function AboutPage() {
 
             <SectionHeader 
               title="Philosophy" 
-              description="How I approach building with AI"
+              subtitle="How I approach building with AI"
             />
             
             <div className="space-y-6 text-text-secondary leading-relaxed text-lg mb-12">
               <p>
-                Most AI interfaces feel like they're shouting at you—constant popups, aggressive suggestions, 
+                Most AI interfaces feel like they&apos;re shouting at you—constant popups, aggressive suggestions, 
                 overwhelming options. I believe AI should act as a calm instrument: powerful when you need it, 
-                invisible when you don't.
+                invisible when you don&apos;t.
               </p>
               
               <p>
@@ -43,14 +43,14 @@ export default function AboutPage() {
               
               <p>
                 Every project follows three principles: opinionated defaults, reversible decisions, and 
-                psychological consideration in every interaction. The goal isn't just to build functional 
-                tools—it's to create experiences that feel right.
+                psychological consideration in every interaction. The goal isn&apos;t just to build functional 
+                tools—it&apos;s to create experiences that feel right.
               </p>
             </div>
 
             <SectionHeader 
               title="Background" 
-              description="Experience and skills"
+              subtitle="Experience and skills"
             />
             
             <div className="text-text-secondary leading-relaxed text-lg mb-12">
@@ -68,7 +68,7 @@ export default function AboutPage() {
 
             <SectionHeader 
               title="Currently" 
-              description="What I'm working on now"
+              subtitle="What I&apos;m working on now"
             />
             
             <div className="text-text-secondary leading-relaxed text-lg">
