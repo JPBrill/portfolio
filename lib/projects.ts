@@ -14,11 +14,12 @@ export const projects: Project[] = [
     accentSoft: 'rgba(21, 244, 209, 0.1)',
     accentStrong: '#0D9B87',
     gradient: 'linear-gradient(135deg, #05060A 0%, #0A1612 50%, #15F4D1 100%)',
-  links: {
-  live: 'https://aira-wallet-three.vercel.app/',
-  github: 'https://github.com/JPBrill/AIRA-Wallet',
-},
   },
+  links: {
+    live: 'https://aira-wallet-three.vercel.app/',
+    github: 'https://github.com/JPBrill/AIRA-Wallet',
+  },
+
   sections: [
     {
       id: 'context',
