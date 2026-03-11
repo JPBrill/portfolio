@@ -17,8 +17,9 @@ export function AppShell({ children, theme }: AppShellProps) {
   return (
     <div className="min-h-screen bg-bg-base text-text-primary">
       <IdentityStrip />
-      
-      <main className="md:ml-64 pt-48 md:pt-0 min-h-screen relative">
+
+      {/* pt-[72px] on mobile accounts for the fixed topbar height; md uses sidebar offset */}
+      <main className="md:ml-64 pt-[72px] md:pt-0 min-h-screen relative">
         <AnimatePresence mode="wait">
           <motion.div
             key={pathname}
