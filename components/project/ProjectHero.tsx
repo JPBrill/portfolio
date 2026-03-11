@@ -1,4 +1,3 @@
-// components/project/ProjectHero.tsx
 'use client';
 
 import { Project } from '@/lib/types';
@@ -10,18 +9,18 @@ interface ProjectHeroProps {
 
 export function ProjectHero({ project }: ProjectHeroProps) {
   return (
-    <section className="mb-16 md:mb-24">
+    <section className="mb-16 md:mb-24 w-full block">
       <div
         className="w-16 h-1 rounded-full mb-8"
         style={{ backgroundColor: project.theme.accent }}
       />
 
-      <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary leading-tight">
+      {/* block + w-full prevents title from shrinking to intrinsic width */}
+      <h1 className="block w-full text-3xl sm:text-4xl md:text-5xl font-bold mb-4 text-text-primary leading-tight">
         {project.title}
       </h1>
 
-      {/* Removed max-w-2xl — fills container fluidly, capped by MainColumn's max-w-4xl */}
-      <p className="text-lg md:text-xl text-text-secondary mb-8 leading-relaxed w-full">
+      <p className="block w-full text-lg md:text-xl text-text-secondary mb-8 leading-relaxed">
         {project.oneLiner}
       </p>
 
