@@ -55,6 +55,64 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 
         <ProjectHero project={project} />
         
+        <ProjectHero project={project} />
+
+{/* Live Demo block — only renders if project has a live link */}
+{project.links?.live && (
+  <div className="my-10">
+    <div
+      className="flex items-center justify-between mb-3"
+      style={{ color: project.theme.accent }}
+    >
+      <span className="text-xs uppercase tracking-widest font-medium opacity-70">
+        Live Application
+      </span>
+      <div className="flex gap-3">
+        <a
+          href={project.links.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs uppercase tracking-widest px-4 py-1.5 rounded border transition-all duration-200 hover:opacity-80"
+          style={{
+            borderColor: project.theme.accent,
+            color: project.theme.accent,
+          }}
+        >
+          Open ↗
+        </a>
+        {project.links.github && (
+          <a
+            href={project.links.github}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs uppercase tracking-widest px-4 py-1.5 rounded border border-white/10 text-white/40 hover:text-white/60 transition-all duration-200"
+          >
+            GitHub ↗
+          </a>
+        )}
+      </div>
+    </div>
+
+    {/* Iframe embed */}
+    <div
+      className="w-full rounded-lg overflow-hidden border"
+      style={{ borderColor: `${project.theme.accent}30`, height: '560px' }}
+    >
+      <iframe
+        src={project.links.live}
+        className="w-full h-full"
+        title={`${project.title} — Live Demo`}
+        loading="lazy"
+      />
+    </div>
+  </div>
+)}
+
+{project.sections.map((section) => (
+  <StorySection key={section.id} section={section} theme={project.theme} />
+))}
+
+
         {project.sections.map((section) => (
           <StorySection key={section.id} section={section} theme={project.theme} />
         ))}

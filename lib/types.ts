@@ -14,6 +14,10 @@ export type ProjectSummary = {
   timeframe: string;
   tech: string[];
   theme: ProjectTheme;
+  links?: {          
+    live?: string;
+    github?: string;
+  };
 };
 
 export type ProjectSection = {

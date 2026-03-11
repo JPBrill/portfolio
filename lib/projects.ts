@@ -2,6 +2,56 @@ import { Project } from './types';
 
 export const projects: Project[] = [
   {
+  slug: 'aira-wallet',
+  title: 'AIRA Wallet',
+  oneLiner: 'Personal finance dashboard that tells you exactly how much you can spend — today, this week, and for the rest of the month',
+  role: 'Full-Stack Developer & Product Designer',
+  timeframe: 'March 2026',
+  tech: ['Next.js 15', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'Zustand', 'Google Gemini AI', 'Radix UI', 'Motion', 'date-fns', 'Vercel'],
+  theme: {
+    name: 'teal',
+    accent: '#15F4D1',
+    accentSoft: 'rgba(21, 244, 209, 0.1)',
+    accentStrong: '#0D9B87',
+    gradient: 'linear-gradient(135deg, #05060A 0%, #0A1612 50%, #15F4D1 100%)',
+  links: {
+  live: 'https://aira-wallet-three.vercel.app/',
+  github: 'https://github.com/JPBrill/AIRA-Wallet',
+},
+  },
+  sections: [
+    {
+      id: 'context',
+      label: 'Context',
+      kind: 'context',
+      content: 'Most budgeting tools show you what you already spent — not what you can safely spend right now. They lump all money together without accounting for timing: bills due this week, income arriving next week, and variable budgets all need separate treatment. The result is people either overspend because they see a large balance, or underspend out of anxiety because they have no clear signal. I wanted to build a single number you can trust: safe-to-spend, calculated in real time across three time horizons.',
+    },
+    {
+      id: 'approach',
+      label: 'Approach',
+      kind: 'approach',
+      content: 'I built the app around a three-layer budget model: Income Sources (what comes in and when), Fixed Commitments (must-pay recurring bills with due days and priority status), and Variable Categories (discretionary monthly budgets). A pure TypeScript finance engine — computeSafeToSpend, computeCategoryUsage, generateMonthlyPlan — runs the calculations independent of the UI, making it fully testable and reusable across views. A multi-step onboarding flow ensures the dashboard is fully populated before a user ever sees an empty state. The AIRA sci-fi design language was applied throughout: deep charcoal backgrounds, teal/cyan accents, glass-card panels, and interpolated progress bars that shift from green to amber to red as budgets fill up. Every list page supports URL-based deep-linking with ?highlight=<id> — so after creating or editing an item, the UI scrolls to it and fades in a highlight, confirming the action visually.',
+    },
+    {
+      id: 'result',
+      label: 'Results',
+      kind: 'result',
+      content: 'Shipped a fully functional, deployed personal finance app in under 5 days from first commit to live Vercel URL. The safe-to-spend engine calculates three time horizons in real time — today, this week, and rest of month — using actual income, unpaid commitments, and transaction history. Complete CRUD for all four data types (income, commitments, categories, transactions), a guided onboarding flow, global currency and week-start preferences, and a live production deployment. Built entirely online: AI Studio as IDE, Perplexity as architecture partner, GitHub for version control, Vercel for deployment.',
+    },
+    {
+      id: 'reflection',
+      label: 'Reflection',
+      kind: 'reflection',
+      content: "The best architectural decision was keeping the finance engine as pure TypeScript functions completely separate from the UI. It made the dashboard composable and the logic trivial to reason about — same inputs, same outputs, every time. The AI Studio + Perplexity collaboration meant architecture and implementation happened simultaneously rather than sequentially, compressing the build timeline significantly. If I were to extend this, I'd add persistent cloud storage (Supabase or Firebase) next — currently data lives in Zustand with localStorage, so it's browser-only. Multi-device sync and long-term spending history are the two features that would move this from a portfolio piece to something people rely on daily.",
+    },
+  ],
+  outcomes: [
+    { label: 'Build Time', value: '5 days' },
+    { label: 'Time Horizons', value: '3' },
+    { label: 'App Routes', value: '7' },
+  ],
+},
+{
   slug: 'agent-dashboard',
   title: 'Agent Dashboard',
   oneLiner: 'AI-powered task management interface that feels inevitable, not artificial',
