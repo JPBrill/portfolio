@@ -102,6 +102,55 @@ export const projects: Project[] = [
     ],
   },
   {
+    slug: 'loan-risk-ui',
+    title: 'Loan Risk UI',
+    oneLiner: 'ML-powered loan risk assessment interface — enter applicant details, run a live model, and get an AI-generated decision email with a safety check in one shot',
+    role: 'Full-Stack Developer',
+    timeframe: 'May 2026',
+    tech: ['Next.js 16', 'React 19', 'TypeScript', 'Tailwind CSS v4', 'FastAPI (backend)', 'Machine Learning Model'],
+    theme: {
+      name: 'emerald',
+      accent: '#10B981',
+      accentSoft: 'rgba(16, 185, 129, 0.1)',
+      accentStrong: '#059669',
+      gradient: 'linear-gradient(135deg, #020B07 0%, #041A10 50%, #10B981 100%)',
+    },
+    links: {
+      github: 'https://github.com/JPBrill/loan-risk-ui',
+    },
+    sections: [
+      {
+        id: 'context',
+        label: 'Context',
+        kind: 'context',
+        content: 'Loan officers and fintech teams need to evaluate applicant risk quickly and consistently, without manually interpreting raw model outputs. A raw probability score means nothing to a non-technical reviewer — what they need is a clear risk label, a rationale, and a ready-to-send decision email. The challenge was bridging the gap between an ML scoring backend and a usable, trustworthy front-end interface that a human could confidently act on.',
+      },
+      {
+        id: 'approach',
+        label: 'Approach',
+        kind: 'approach',
+        content: 'I built a two-panel layout: an applicant input form on the left capturing all scoring features (age, income, credit score, DTI ratio, employment status, loan purpose, etc.) and a live results panel on the right. The form maps directly to the ML model\'s expected input schema — numeric fields for quantitative signals, dropdowns for categorical ones. On submission, the UI calls a FastAPI backend that runs the classifier, generates a decision email via LLM, and runs a safety check to flag whether human review is required. Risk policy (conservative vs. aggressive threshold) is selectable per-session, letting operators tune sensitivity without touching the model.',
+      },
+      {
+        id: 'result',
+        label: 'Results',
+        kind: 'result',
+        content: 'Delivered a functional loan assessment UI that integrates ML scoring, LLM-generated decision emails, and a safety review pipeline in a single request cycle. The results panel surfaces the risk label (high/low), default probability, policy threshold, a formatted email preview, and a human-review flag — giving operators everything they need to act on a decision without leaving the screen.',
+      },
+      {
+        id: 'reflection',
+        label: 'Reflection',
+        kind: 'reflection',
+        content: "The most valuable design decision was making risk policy configurable at the session level — conservative (0.5) vs. aggressive (0.4) threshold — rather than hardcoding it. It made the tool genuinely useful for teams with different risk appetites without requiring a backend change. The safety check layer, which flags emails for human review before they're sent, was also a key trust signal: it makes the AI feel like a reliable colleague rather than an autonomous actor.",
+      },
+    ],
+    outcomes: [
+      { label: 'Risk Policies', value: '2' },
+      { label: 'Input Features', value: '12' },
+      { label: 'Pipeline Steps', value: '3' },
+    ],
+  },
+  {
     slug: 'agent-dashboard',
     title: 'Agent Dashboard',
     oneLiner: 'AI-powered task management interface that feels inevitable, not artificial',
