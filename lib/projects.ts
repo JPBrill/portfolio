@@ -116,6 +116,7 @@ export const projects: Project[] = [
       gradient: 'linear-gradient(135deg, #020B07 0%, #041A10 50%, #10B981 100%)',
     },
     links: {
+      live: 'https://loan-risk-ui.vercel.app/',
       github: 'https://github.com/JPBrill/loan-risk-ui',
     },
     sections: [
